@@ -16,7 +16,7 @@ iptables -A OUTPUT -p udp --dport 53 -j ACCEPT
 iptables -A INPUT -p udp --sport 53 -j ACCEPT
 
 #Allow outgoing TCP 80,443 [To download from web]
-iptables -A OUTPUT -p tcp -m multiport --doprts 80,443,22 -j ACCEPT
+iptables -A OUTPUT -p tcp -m multiport --dports 80,443,22 -j ACCEPT
 iptables -A INPUT -p tcp -m multiport --sports 80,443,22 -j ACCEPT
 
 #ICMP type 0 echo reply
